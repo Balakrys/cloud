@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <link rel="icon" href=" static/e.jpg">
+ -->
+ <link rel='shortcut icon' href='/static/e.jpg' />
+
+  <title> 
+  h1 {
+    text-decoration: overline;
+}
+<title>Registrationform</title>
+</head>
+<body background="/static/e.jpg" > 
+<!-- <body background-size : cover ;> -->
+<!-- CSS -->  
+<style >
+html, 
+body {
+height: 100%;
+}
+
+body {
+background :"/static/.jpg";
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+</style>
+
+<form action="{% url 'real' %}" method="post"> {% csrf_token %}
+<div align="center">
+<p><blockquote><font size="8" color="white
+">STUDENTS REGISTRATION FORM<font></blockquote></p>
+</div>
+  name :<br><br>
+  <input type="text" name="username">
+  <br><br>
+  
+  
+  mail:<br><br>
+  <!-- <input type="text" name="mail"> -->
+  <div class="form-group half-wigth pull-right">
+                    <!-- <label class="sr-only" for="user-email"></label>
+                    <input type="passowrd" name="password" data-validation-required-message="Please enter your email address." required class="lineField robotoLight" id="password" placeholder="password"> -->
+                  <input type="password" name="password">
+                    <p class="help-block text-danger"></p>
+  
+  <input type="text" name="message">
+  <input type="submit" value="login">
+  <br><br>
+  
+  <br><br>
+{{remaining_seconds}}
+   
+</form>
+<iframe src="http://free.timeanddate.com/countdown/i5f71z4e/n1763/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs100/szw320/szh135/tatTime%20left%20to%20Event%20in/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2016-10-20T00:00:00" allowTransparency="true" frameborder="0" width="151" height="65"></iframe>
+
+<a href ="/accounts/logout">logout</a
+>
+<a href ="/connection">cookie</a>
+</body>
+</html>

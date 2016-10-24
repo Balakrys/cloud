@@ -1,0 +1,26 @@
+<html>
+   <body>
+   <body background="/static/e.jpg"> 
+      <table border = 1>
+         <thead>
+            <td>username</td>
+            <td>passowrd </td>
+            <td>message</td>
+            
+            
+         </thead>
+         
+         {% for row in obj %}
+            <tr>
+               <td>{{row.username}}</td>
+               <td>{{row.password}}</td>
+               <td>{{row.message}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      <a href ="/accounts/logout">logout</a>
+      
+   </body>
+</html>

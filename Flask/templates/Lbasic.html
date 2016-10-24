@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registrationform</title>
+</head>
+
+<body background="/static/bat.jpg" > 
+<!-- <body background-size : cover ;> -->
+<title>Example</title>
+
+<!-- CSS -->  
+<style >
+html, 
+body {
+height: 100%;
+}
+
+body {
+background :"/static/bat.jpg";
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+</style>
+
+
+
+<!-- <body bgcolor="grey"> -->
+<form action="demo_form.asp" method="post">
+<div align="center">
+<p><blockquote><font size="8" color="white">STUDENTS REGISTRATION FORM<font></blockquote></p>
+</div>
+  First name:<br><br>
+  <input type="text" name="firstname">
+  <br><br>
+  Last name:<br><br>
+  <input type="text" name="lastname">
+  <br><br>
+  Department:<br><br>
+  <select>
+  <option value="cse">Computer Science and Engineering</option>
+  <option value="ece">Electronics and Communication Engineering</option>
+  <option value="eee">Electrical and Electronics Engineering</option>
+  <option value="mech">Mechanical Engineering</option>
+  <option value="civil">Civil Engineering</option>
+  </select><br><br>
+  Mailid:<br><br>
+  <input type="text"name="mail">
+  <br><br>
+  Location:<br><br>
+  <input type="text" name="location">
+  <br><br>
+
+   
+   Gender:<br>
+    <input type="radio" name="sex" value="male">Male
+    <input type="radio" name="sex" value="female">Female<br><br>
+    Languages:<br>
+    <input type="checkbox" name="language" value="html">HTML<br>
+    <input type="checkbox" name="language" value="php">PHP<br>
+    <input type="checkbox" name="language" value="c">C<br>
+    <input type="checkbox" name="language" value="python">PYTHON<br><br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Clear">
+</form>
+
+
+</body>
+</html>

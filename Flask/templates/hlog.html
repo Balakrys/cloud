@@ -1,0 +1,155 @@
+<html>
+<head>
+  <title>Registrationform</title>
+
+</head>
+<body>
+<body background="/static/e.jpg" > 
+<!-- <body background-size : cover ;> -->
+<!-- CSS -->  
+<style >
+html, 
+body {
+height: 100%;
+}
+
+body {
+background :"/static/.jpg";
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+</style>
+<div align="center">
+<font size="4" color="white">
+ 		<form action = "{{ url_for('addrec')}}" method = "POST">
+ 		<!-- <form action = "{{ url_for('upda')}}"  method = "POST"> -->
+ 		
+ 		<br><br><br><br><br><br><br>
+         <h3>SIGN UP</h3>
+         
+        
+<style>
+input[type=text ] 
+{
+    width: 250px;
+    box-sizing: border-box;
+    border: 6px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=password ] 
+{
+    width: 250px;
+    box-sizing: border-box;
+    border: 6px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+
+input[type=text ]:focus {
+    width: 25%;
+}
+</style>
+
+
+
+		<input type="text" name="nm" placeholder="Name"/>
+		</br>
+         
+         <br>
+         <input type = "text" name = "mail"  placeholder="email"/><br>
+         
+         <br>
+         <!-- <input type = "password" name = "password" placeholder="password"  /><br> -->
+
+<input type="text" name="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" />
+<span id="password_strength"></span>
+<script type="text/javascript">
+    function CheckPasswordStrength(password) {
+        var password_strength = document.getElementById("password_strength");
+ 
+        //TextBox left blank.
+        if (password.length == 0) {
+            password_strength.innerHTML = "";
+            return;
+        }
+ 
+        //Regular Expressions.
+        var regex = new Array();
+        regex.push("[A-Z]"); //Uppercase Alphabet.
+        regex.push("[a-z]"); //Lowercase Alphabet.
+        regex.push("[0-9]"); //Digit.
+        regex.push("[$@$!%*#?&]"); //Special Character.
+ 
+        var passed = 0;
+ 
+        //Validate for each Regular Expression.
+        for (var i = 0; i < regex.length; i++) {
+            if (new RegExp(regex[i]).test(password)) {
+                passed++;
+            }
+        }
+ 
+        //Validate for length of Password.
+        if (passed > 2 && password.length > 8) {
+            passed++;
+        }
+ 
+        //Display status.
+        var color = "";
+        var strength = "";
+        switch (passed) {
+            case 0:
+            case 1:
+                strength = "Weak";
+                color = "red";
+                break;
+            case 2:
+                strength = "Good";
+                color = "darkorange";
+                break;
+            case 3:
+            case 4:
+                strength = "Strong";
+                color = "green";
+                break;
+            case 5:
+                strength = "Very Strong";
+                color = "darkgreen";
+                break;
+        }
+        password_strength.innerHTML = strength;
+        password_strength.style.color = color;
+    }
+</script>
+
+         
+         <br>
+         <input type = "password" name = "confirm"  placeholder="confirm passowrd" /><br>
+         <font size="3">Gender:<br>
+    		<input type="radio" name="gender" value="male">Male
+    		<input type="radio" name="gender" value="female">Female<br><br>
+
+         
+
+         <input type = "image"  img src="/static/sub.png" value = "submit" height="55" width="120"/><br>
+
+      	</form>
+      <a href ="/listt">show database</a>
+      <a href ="/upda">update profile </a>
+
+    </body>
+<html>

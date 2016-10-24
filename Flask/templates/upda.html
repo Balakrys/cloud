@@ -1,0 +1,27 @@
+<<html>
+   <body>
+   <body background="/static/e.jpg"> 
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>mail >/td<
+            <td>password</td>
+            <td>confirm</td>
+            
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["MAIL"]}}</td>
+               <td> {{ row["passowrd"]}}</td>
+               <td>{{row['confirm']}}</td>	
+               
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
